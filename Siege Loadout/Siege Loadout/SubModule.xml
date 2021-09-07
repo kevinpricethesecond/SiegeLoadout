@@ -1,0 +1,25 @@
+﻿<Module>
+  <Name value="Siege Loadout a Bannerlord Mod"/>
+  <Id value="Siege_Loadout"/>
+  <Version value="v1.0.0"/>
+  <SingleplayerModule value="true"/>
+  <MultiplayerModule value="false"/>
+  <DependedModules>
+    <DependedModule Id="Native"/>
+    <DependedModule Id="SandBoxCore"/>
+    <DependedModule Id="Sandbox"/>
+    <DependedModule Id="StoryMode" />
+  </DependedModules>
+  <SubModules>
+    <SubModule>
+      <Name value="Siege_Loadout"/>
+      <DLLName value="Siege_Loadout.dll"/>
+      <SubModuleClassType value="Siege_Loadout.SubModule"/>
+      <Tags>
+        <Tag key="DedicatedServerType" value="none" />
+        <Tag key="IsNoRenderModeElement" value="false" />
+      </Tags>
+    </SubModule>
+  </SubModules>
+  <Xmls/>
+</Module>
