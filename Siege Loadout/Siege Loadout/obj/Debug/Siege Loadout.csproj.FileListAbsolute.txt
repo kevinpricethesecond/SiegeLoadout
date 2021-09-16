@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\Siege_Loadout\bin\Win64_Shipping_Client\Siege Loadout.dll
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\Siege_Loadout\bin\Win64_Shipping_Client\Siege Loadout.pdb
+D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\Siege Loadout.csprojAssemblyReference.cache
+D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\Siege Loadout.csproj.CoreCompileInputs.cache
+D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\Siege Loadout.dll
+D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\Siege Loadout.pdb
+D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\Siege Loadout.csproj.CopyComplete
