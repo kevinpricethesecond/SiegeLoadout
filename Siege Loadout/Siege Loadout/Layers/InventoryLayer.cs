@@ -11,7 +11,7 @@ namespace Siege_Loadout.Layers
         {
             
             _viewModel = new CustomInventoryVM();
-            this.LoadMovie("SiegeInventory", this._viewModel);
+            /*this.LoadMovie("SiegeInventory", this._viewModel);*/
         }
     }
 }
