@@ -14,6 +14,14 @@ namespace Siege_Loadout
         private SPInventoryVM _inventory = null;
         private HintViewModel _battleOutfitHint;
 
+
+        public CustomInventoryVM() : base()
+        {
+            _inventoryLogic = InventoryManager.InventoryLogic;
+            _hero = Hero.MainHero;
+            Utilities.PrintLine($"inside customVM with Inventory Logic {_inventoryLogic}");
+        }
+
         public CustomInventoryVM(SPInventoryVM inventory) : base()
         {
             _inventoryLogic = InventoryManager.InventoryLogic;

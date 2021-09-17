@@ -31,7 +31,7 @@ namespace Siege_Loadout
                     {
                         _inventoryScreen = ScreenManager.TopScreen as InventoryGauntletScreen;
                         Inventory = (SPInventoryVM)_inventoryScreen.GetType().GetField("_dataSource", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(_inventoryScreen);
-                        _mainLayer = new InventoryLayer(1000, "GauntletLayer", Inventory, true);
+                        _mainLayer = new InventoryLayer(1000, "GauntletLayer", Inventory, false);
                         
                         _inventoryScreen.AddLayer(_mainLayer);
                         _mainLayer.InputRestrictions.SetInputRestrictions(true, InputUsageMask.All);
@@ -50,7 +50,7 @@ namespace Siege_Loadout
             {
                 Utilities.PrintLine($"Failed to add custom inventory layer due to {e}");
             }
-        }
+}
 
         public override void RegisterEvents()
         {
