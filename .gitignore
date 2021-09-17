@@ -1,5 +1,6 @@
-
 *.pdb
 *.dll
 *.cache
 Siege Loadout/.vs/Siege_Loadout/v16/.suo
+*.csproj
+Siege Loadout/Siege Loadout/Siege Loadout.csproj

@@ -1,0 +1,12 @@
+﻿<Prefab>
+  <Constants />
+  <VisualDefinitions>
+  </VisualDefinitions>
+  <Window>
+    <ButtonWidget Id="SiegeFilter" WidthSizePolicy="Fixed" HeightSizePolicy="Fixed" SuggestedWidth="126" SuggestedHeight="750" HorizontalAlignment="Center" Brush="InventoryCivillianModeButton" ButtonType="Radio">
+      <Children>
+        <HintWidget DataSource="{BattleOutfitHint}" DoNotAcceptEvents="true" WidthSizePolicy="StretchToParent" HeightSizePolicy="StretchToParent" Command.HoverBegin="ExecuteBeginHint" Command.HoverEnd="ExecuteEndHint" />
+      </Children>
+    </Window>
+</Prefab>
+

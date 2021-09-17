@@ -1,4 +1,4 @@
-﻿using TaleWorlds.Core;
+﻿using TaleWorlds.CampaignSystem.ViewModelCollection;
 using TaleWorlds.Engine.GauntletUI;
 
 namespace Siege_Loadout.Layers
@@ -7,11 +7,16 @@ namespace Siege_Loadout.Layers
     {
         CustomInventoryVM _viewModel;
 
-        public InventoryLayer(int localOrder, string categoryId = "GauntletLayer") : base(localOrder, categoryId)
+        public InventoryLayer(int localOrder, string categoryId = "GauntletLayer", bool shouldClear = false) : base(localOrder, categoryId, shouldClear)
         {
-            
-            _viewModel = new CustomInventoryVM();
-            /*this.LoadMovie("SiegeInventory", this._viewModel);*/
+            LoadMovie("SiegeInventory", _viewModel);
+        }
+
+        public InventoryLayer(int localOrder, string categoryId, SPInventoryVM inventory, bool shouldClear = false) : base(localOrder, categoryId, shouldClear)
+        {
+            _viewModel = new CustomInventoryVM(inventory);
+            Utilities.PrintLine($"inside inventory layer, have view model::{_viewModel}");
+            LoadMovie("SiegeInventory", _viewModel);
         }
     }
 }

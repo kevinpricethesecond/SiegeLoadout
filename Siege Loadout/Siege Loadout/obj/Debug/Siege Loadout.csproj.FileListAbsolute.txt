@@ -4,4 +4,3 @@ D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\S
 D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\Siege Loadout.csproj.CoreCompileInputs.cache
 D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\Siege Loadout.dll
 D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\Siege Loadout.pdb
-D:\Games\Bannerlord Backups\SiegeLoadout\Siege Loadout\Siege Loadout\obj\Debug\Siege Loadout.csproj.CopyComplete

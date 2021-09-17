@@ -1,7 +1,6 @@
 ﻿using SandBox.GauntletUI;
 using System;
-using System.IO;
-using TaleWorlds.MountAndBlade;
+using System.Reflection;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.ViewModelCollection;
 using TaleWorlds.Core;
@@ -14,19 +13,14 @@ namespace Siege_Loadout
 {
     class CustomInventoryBehaviour : CampaignBehaviorBase
     {
-        public override void RegisterEvents()
-        {
-            Game.Current.EventManager.RegisterEvent(new Action<TutorialContextChangedEvent>(this.AddNewInventoryLayer));
-        }
-
-        public static SPInventoryVM Inventory = null;
-        InventoryGauntletScreen _inventoryScreen = null;
-        GauntletLayer _mainLayer = null;
+        public SPInventoryVM Inventory { get; private set; }
+        private InventoryGauntletScreen _inventoryScreen { get; set; }
+        private GauntletLayer _mainLayer { get; set; }
 
         private void AddNewInventoryLayer(TutorialContextChangedEvent tutorialContextChangedEvent)
         {
-            /*try
-            {*/
+            try
+            {
                 if (tutorialContextChangedEvent == null)
                 {
                     throw new Exception("tutorialContextChangedEvent is null");
@@ -36,9 +30,9 @@ namespace Siege_Loadout
                     if (ScreenManager.TopScreen is InventoryGauntletScreen)
                     {
                         _inventoryScreen = ScreenManager.TopScreen as InventoryGauntletScreen;
-
-                       
-                        _mainLayer = new InventoryLayer(1000, "GauntletLayer");
+                        Inventory = (SPInventoryVM)_inventoryScreen.GetType().GetField("_dataSource", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(_inventoryScreen);
+                        _mainLayer = new InventoryLayer(1000, "GauntletLayer", Inventory, true);
+                        
                         _inventoryScreen.AddLayer(_mainLayer);
                         _mainLayer.InputRestrictions.SetInputRestrictions(true, InputUsageMask.All);
                     }
@@ -51,11 +45,16 @@ namespace Siege_Loadout
                         _mainLayer = null;
                     }
                 }
-            /*}
+            }
             catch (Exception e)
             {
                 Utilities.PrintLine($"Failed to add custom inventory layer due to {e}");
-            }*/
+            }
+        }
+
+        public override void RegisterEvents()
+        {
+            Game.Current.EventManager.RegisterEvent(new Action<TutorialContextChangedEvent>(this.AddNewInventoryLayer));
         }
 
         public override void SyncData(IDataStore dataStore)

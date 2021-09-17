@@ -10,7 +10,6 @@ namespace Siege_Loadout
 
         public Equipment GetSiegeEquipment(Hero hero)
         {
-            Utilities.PrintLine("inside get method for heroSiegeEquipment");
             if(_heroSiegeEquipment.TryGetValue(hero, out Equipment equipment))
             {
                 return equipment;

@@ -42,13 +42,6 @@
   </PropertyGroup>
   <!-- Bannerlord Native Assemblies -->
   <ItemGroup>
-    <Reference Include="0Harmony_2.0.0.10, Version=2.0.0.10, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\UIExtenderLib.2.0.0.3\lib\net472\0Harmony_2.0.0.10.dll</HintPath>
-    </Reference>
-    <Reference Include="Bannerlord.UIExtenderEx, Version=2.1.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.UIExtenderEx\bin\Win64_Shipping_Client\Bannerlord.UIExtenderEx.dll</HintPath>
-    </Reference>
     <Reference Include="C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\bin\Win64_Shipping_Client\TaleWorlds*.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
@@ -69,9 +62,6 @@
     <Reference Include="C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord\Modules\CustomBattle\bin\Win64_Shipping_Client\TaleWorlds*.dll">
       <HintPath>%(Identity)</HintPath>
       <Private>False</Private>
-    </Reference>
-    <Reference Include="UIExtenderLib_2.0.0.3, Version=2.0.0.3, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\UIExtenderLib.2.0.0.3\lib\net472\UIExtenderLib_2.0.0.3.dll</HintPath>
     </Reference>
   </ItemGroup>
   <!-- Files & Classes -->

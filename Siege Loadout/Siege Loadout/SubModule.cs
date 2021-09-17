@@ -3,7 +3,6 @@ using TaleWorlds.Core;
 using TaleWorlds.Engine;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.Library;
-using UIExtenderLib;
 using System;
 using System.Collections.Generic;
 
@@ -11,6 +10,12 @@ namespace Siege_Loadout
 {
     public class SubModule : MBSubModuleBase
     {
+
+        protected override void OnSubModuleLoad()
+        {
+            base.OnSubModuleLoad();
+            
+        }
         public override void OnBeforeMissionBehaviourInitialize(Mission mission)
         {
             base.OnBeforeMissionBehaviourInitialize(mission);
@@ -30,6 +35,7 @@ namespace Siege_Loadout
                 campaignStarter.AddBehavior(new HeroSiegeEquipmentCampaignBehaviour());
                 campaignStarter.AddBehavior(new MissionSiegeEquipmentCampaignBehaviour());
                 campaignStarter.AddBehavior(new CustomInventoryBehaviour());
+                
             }
         }
 
